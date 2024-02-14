@@ -40,6 +40,7 @@ class Checker(webdriver.Chrome):
         next_btn = self.find_element(By.ID , 'nextBtn')
         next_btn.click()
 
+    #You can the city and country as you wish as well as the starting and ending date
     def location_and_date(self , location ="Riyadh, Saudi Arabia" , start_date='10/17/2023' , end_date="10/31/2023"):
         location = self.find_element(By.ID , 'searchLocation')
         location.send_keys("Riyadh, Saudi Arabia")
@@ -125,7 +126,7 @@ class Checker(webdriver.Chrome):
         for d in data:
             if not self.data.__contains__(d):
                 #send mail about a new appointment had been available
-                mail = Email("s.a.a.d.alsahly.al.sahly@gmail.com","sz0d.717@gmail.com","lrfvkpwggojixkow")
+                mail = Email("Sender Email for notfication","Receiver Email for notfication","Email code")
                 mail.send_mail(f"{d[1]}-{d[2]}",f"Location: {d[0]}\nDate: {d[1]}-{d[2]}")
                 self.data.append(d)
         
