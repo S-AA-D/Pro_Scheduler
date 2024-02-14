@@ -1,2 +1,2 @@
 # Pro_Scheduler
-An automated bot for booking an exam date for medical students
+An automated bot for looking for  an exam date for medical students
